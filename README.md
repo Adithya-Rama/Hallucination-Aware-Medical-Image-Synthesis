@@ -17,17 +17,16 @@
 
 ## 📋 Table of Contents
 
-* [Overview](https://claude.ai/chat/1764c279-0035-4170-a44d-733736b4f095#overview)
-* [Key Features](https://claude.ai/chat/1764c279-0035-4170-a44d-733736b4f095#key-features)
-* [Architecture](https://claude.ai/chat/1764c279-0035-4170-a44d-733736b4f095#architecture)
-* [Installation](https://claude.ai/chat/1764c279-0035-4170-a44d-733736b4f095#installation)
-* [Dataset Setup](https://claude.ai/chat/1764c279-0035-4170-a44d-733736b4f095#dataset-setup)
-* [Training Pipeline](https://claude.ai/chat/1764c279-0035-4170-a44d-733736b4f095#training-pipeline)
-* [Inference &amp; Generation](https://claude.ai/chat/1764c279-0035-4170-a44d-733736b4f095#inference--generation)
-* [Ablation Studies](https://claude.ai/chat/1764c279-0035-4170-a44d-733736b4f095#ablation-studies)
-* [Downstream Evaluation](https://claude.ai/chat/1764c279-0035-4170-a44d-733736b4f095#downstream-evaluation)
-* [Results](https://claude.ai/chat/1764c279-0035-4170-a44d-733736b4f095#results)
-* [Citation](https://claude.ai/chat/1764c279-0035-4170-a44d-733736b4f095#citation)
+* [Overview](https://github.com/Adithya-Rama/Hallucination-Aware-Medical-Image-Synthesis?tab=readme-ov-file#-overview)
+* [Key Features](https://github.com/Adithya-Rama/Hallucination-Aware-Medical-Image-Synthesis?tab=readme-ov-file#-key-features)
+* [Architecture](https://github.com/Adithya-Rama/Hallucination-Aware-Medical-Image-Synthesis?tab=readme-ov-file#%EF%B8%8F-architecture)
+* [Installation](https://github.com/Adithya-Rama/Hallucination-Aware-Medical-Image-Synthesis?tab=readme-ov-file#%EF%B8%8F-installation)
+* [Dataset Setup](https://github.com/Adithya-Rama/Hallucination-Aware-Medical-Image-Synthesis?tab=readme-ov-file#-dataset-setup)
+* [Training Pipeline](https://github.com/Adithya-Rama/Hallucination-Aware-Medical-Image-Synthesis?tab=readme-ov-file#-training-pipeline)
+* [Inference &amp; Generation](https://github.com/Adithya-Rama/Hallucination-Aware-Medical-Image-Synthesis?tab=readme-ov-file#-inference--generation)
+* [Ablation Studies](https://github.com/Adithya-Rama/Hallucination-Aware-Medical-Image-Synthesis?tab=readme-ov-file#-ablation-studies)
+* [Downstream Evaluation](https://github.com/Adithya-Rama/Hallucination-Aware-Medical-Image-Synthesis?tab=readme-ov-file#-downstream-evaluation)
+* [Results](https://github.com/Adithya-Rama/Hallucination-Aware-Medical-Image-Synthesis?tab=readme-ov-file#-results)
 
 ---
 
