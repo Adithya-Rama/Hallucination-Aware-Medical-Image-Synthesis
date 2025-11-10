@@ -1,0 +1,6 @@
+controlnet_adapter/diffusion_pytorch_model.fp16.safetensors
+lora_colonoscopy_phase1/adapter_model.safetensors
+lora_colonoscopy_phase2/adapter_model.safetensors
+experiments/downstream/real_best.pth
+experiments/downstream/real_plus_syn_best.pth
+classifiers/
