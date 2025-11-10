@@ -7,7 +7,7 @@
 
 **Official implementation of "Hallucination-Aware Medical Image Synthesis Using Multi-Constraint Guided Diffusion for Colonoscopy Data Augmentation"**
 
-> **Authors:** Adithya, Justin Paul Kolengadan
+> **Authors:** Adithya Rama, Justin Paul Kolengadan
 >
 > **Affiliation:** Australian National University
 >
@@ -154,7 +154,7 @@ Our pipeline uses  **4 public colonoscopy datasets** :
 | **Kvasir-SEG**        | Polyp segmentation, Phase 1 training | 1,000 images | [Kaggle](https://www.kaggle.com/datasets/fkarimovv/kvasir-seg)         |
 | **HyperKvasir**       | Rich captions, Phase 2 training      | 10k+ labeled | [Simula](https://datasets.simula.no/hyper-kvasir/)                     |
 | **Kvasir-Instrument** | Tool detection training              | 590 frames   | [Kaggle](https://www.kaggle.com/datasets/debeshjha1/kvasirinstrument)  |
-| **Nerthus**           | BBPS quality training                | Video frames | [Kaggle](https://www.kaggle.com/datasets/orvile/nerthus-video-dataset) |
+| **Nerthus**           | BBPS quality training                | Video frames | [Simula](https://datasets.simula.no/nerthus/) |
 
 ### Automatic Download (in Colab)
 
@@ -196,14 +196,14 @@ data/
 ### Step 1: Train Constraint Heads
 
 ```bash
-# All 4 heads trained in notebook sections:
-# - U-Net Segmenter (10 epochs, Dice+BCE loss)
-# - Size Classifier (10 epochs, CrossEntropy)
-# - Instrument Classifier (8 epochs, weighted sampling)
-# - BBPS Classifier (8 epochs, 4-class)
+All 4 heads trained in notebook sections:
+- U-Net Segmenter (10 epochs, Dice+BCE loss)
+- Size Classifier (10 epochs, CrossEntropy)
+- Instrument Classifier (8 epochs, weighted sampling)
+- BBPS Classifier (8 epochs, 4-class)
 ```
 
- **Expected Performance** :
+**Expected Performance** :
 
 * Segmentation: Val IoU ~0.85
 * Size: Val Accuracy ~92%
@@ -215,25 +215,25 @@ data/
 **Phase 1: Masked Domain Adaptation (2000 steps)**
 
 ```python
-# Trains on Kvasir-SEG with binary masks applied
-# Loss: MSE between predicted and actual noise
-# LoRA rank: 8, alpha: 16
+Trains on Kvasir-SEG with binary masks applied
+Loss: MSE between predicted and actual noise
+LoRA rank: 8, alpha: 16
 ```
 
 **Phase 2: Rich Prompt Conditioning (1500 steps)**
 
 ```python
-# Trains on HyperKvasir with semantic captions
-# Example: "A colonoscopy image of the lower GI tract, 
-#          showing polyp, classified as adenoma."
+Trains on HyperKvasir with semantic captions
+Example: "A colonoscopy image of the lower GI tract, 
+          showing polyp, classified as adenoma."
 ```
 
 ### Step 3: ControlNet Training (3000 steps)
 
 ```python
-# Combines Kvasir-SEG + HyperKvasir-SEG masks
-# FP16 mixed precision, DPMSolver++ scheduler
-# Checkpoints every 500 steps
+Combines Kvasir-SEG + HyperKvasir-SEG masks
+FP16 mixed precision, DPMSolver++ scheduler
+Checkpoints every 500 steps
 ```
 
 **Training Time** (Colab A100):
